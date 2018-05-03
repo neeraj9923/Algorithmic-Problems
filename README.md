@@ -1,2 +1,1 @@
-# Codechef-Problems
-Solving problems learning
+Solving problems
