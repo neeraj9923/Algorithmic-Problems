@@ -1,0 +1,27 @@
+vector<int> Solution::plusOne(vector<int> &A) {
+    int last = A.size()-1;
+    while(A[last] == 9){
+        A[last] = 0;
+        last -- ;
+    }
+    if(last >= 0){
+    A[last] = A[last]+1;
+    }
+    else{
+    A.insert(A.begin(),1);
+    }
+    int i =0;
+    vector<int>::iterator it1, it2;
+    if(A[i] == 0){
+        it1 = A.begin();
+        it2 = A.begin();
+        i++;
+        it2++;
+    }
+    while(A[i] == 0){
+        it2++;
+        i++;
+    }
+    A.erase(it1,it2);
+    return A;
+}
